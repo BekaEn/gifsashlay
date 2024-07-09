@@ -1,0 +1,38 @@
+.blog-form {
+    &__container {
+        @apply flex justify-center items-center w-full;
+
+        .form {
+            border-color: var(--primary);
+            width: 800px;
+        }
+    }
+
+    &__fields {
+        @apply p-4 flex flex-col gap-4;
+
+        &-group {
+            @apply w-full flex gap-2 items-center;
+            input, textarea {
+                @apply w-full;
+            }
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.paragraph-group {
+    @apply relative p-5 border border-gray-500 rounded-lg;
+
+    button {
+        @apply absolute rounded-full;
+        top: -20px;
+        right: -20px;
+        padding: 6px;
+    }
+}

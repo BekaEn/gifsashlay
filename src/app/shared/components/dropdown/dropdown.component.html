@@ -1,0 +1,5 @@
+<div class="dropdown" id="dropdown">
+    <ng-container *ngFor="let option of options">
+        <p (click)="change(option.value)">{{option.name}}</p>
+    </ng-container>
+</div>

@@ -1,0 +1,70 @@
+.about {
+    @apply pb-40 pt-10;
+
+    @media screen and (max-width: 600px) {
+        @apply flex-col pb-20;
+    }
+
+
+    &-title {
+        margin-bottom: 1.75rem;
+        font-weight: 600;
+        font-size: 3.2rem;
+        color: var(--black);
+    }
+
+    &-text {
+        margin-bottom: 2rem;
+        line-height: 1.7;
+        font-size: 1.8rem;
+    }
+
+    &-image {
+        img {
+            width: 85%;
+            margin-left: auto;
+
+            @media screen and (max-width: 600px) {
+                width: 60%;
+            }
+        }
+    }
+    &-content {
+        @apply flex flex-col justify-center;
+
+        @media screen and (max-width: 600px) {
+            @apply p-16;
+        }
+
+        h1 {
+            @apply font-semibold mb-4;
+            color: var(--black);
+            font-size: 5rem;
+            line-height: 1.4;
+        
+            @media screen and (max-width: 768px) {
+                line-height: 1.2;
+            }
+        }
+
+        p {
+            @apply mb-6;
+            line-height: 1.75;
+            color: var(--grey);
+    
+            &:last-child {
+                @apply mb-20
+            }
+        }
+    }
+
+    &-social{
+        @apply flex gap-8 cursor-pointer;
+        
+        i {
+            @apply rounded-full;
+            font-size: 2rem;
+            transition: all 0.2s ease;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div class="custom-container mb-12">
+    <h1 class="section-title">{{blogType | titlecase}} Categories</h1>
+
+    <!-- post-list-section -->
+    <ng-container>
+        <div class="blog-cards">
+            <div *ngFor="let blog of blogs">
+               
+            </div>
+        </div>
+        <app-load-more-btn *ngIf="blogs.length >= 9 && blogs.length != totalData.length" (emitLoadMore)="loadMoreBlogs()"></app-load-more-btn>
+    </ng-container>
+
+    <ng-container *ngIf="!blogs.length">
+
+    </ng-container>
+</div>

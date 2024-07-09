@@ -1,0 +1,25 @@
+<header>
+    <div class="custom-container">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <app-logo></app-logo>
+            </div>
+            <ul class="navbar-list">
+                <li class="navbar-list-item"><a [routerLink]="['/']">Home</a></li>
+                <!-- <li class="navbar-list-item"><a [routerLink]="['/']">Blog</a></li> -->
+                <li class="navbar-list-item" (click)="openOptions()">
+                    <span id="dropdown-open">Categories <i class="fa-solid fa-angle-down" id="dropdown-icon" (click)="openOptions()"></i></span>
+                    <app-dropdown id="dropdown" *ngIf="displayDropdown" [options]="blog_types" (emitSelectedValue)="selectedType($event)"></app-dropdown>
+                </li>
+                <li class="navbar-list-item"><a [routerLink]="['about-us']">About Us</a></li>
+                <li class="navbar-list-item"><a [routerLink]="['contact-us']">Contact Us</a></li>
+                <li class="navbar-list-item"><a [routerLink]="['privacy-policy']">Privacy Policy</a></li>
+            </ul>
+            <div class="navbar-social">
+                <a href="https://www.instagram.com/" aria-label="follow us on instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/" aria-label="follow us on twitter"><i class="fab fa-twitter"></i></a>
+                <!-- <a [routerLink]="['/home']" aria-label="you can jump to search page"><i class="fas fa-search"></i></a> -->
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,12 @@
+.mb-header {
+    @apply hidden;
+    background-color: var(--primary-light);
+    img {
+        position: absolute;
+        left: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+        display: flex;
+    }
+}

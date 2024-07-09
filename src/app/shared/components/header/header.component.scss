@@ -1,0 +1,73 @@
+.navbar {
+    @apply flex justify-between py-14;
+
+    @media screen and (max-width: 600px) {
+        @apply flex-col h-screen justify-center items-center gap-20;
+    }
+
+    &-list{
+        @apply flex gap-20;
+
+        @media screen and (max-width: 600px) {
+            @apply flex-col justify-center items-center gap-14;
+            font-size: 2.4rem;
+        }
+
+        &-item {
+            @apply cursor-pointer relative;
+            transition: all 0.2s ease-in;
+            color: var(--black);
+
+            a {
+                @apply flex items-center;
+
+                i {
+                    @apply block mt-2 ml-6;
+                }
+            }
+            &:hover {
+                @apply text-gray-500;
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+
+    &-social {
+        @apply flex gap-8 cursor-pointer;
+        
+        i {
+            font-size: 1.6rem;
+
+            @media screen and (max-width: 600px) {
+                font-size: 2.2rem;
+            }
+    
+        }
+    }
+
+    &-logo {
+        @apply uppercase font-bold cursor-pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            @apply text-gray-500;
+            transition: all 0.2s ease-in;
+        }
+    }
+}
+
+
+header {
+    // @apply bg-slate-100;
+}
+
+::ng-deep .navbar-list-item app-dropdown {
+    @apply absolute z-10;
+    top: 36px;
+    left: -6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+    @media screen and (max-width: 600px) {
+        left: -100%;
+    }
+}

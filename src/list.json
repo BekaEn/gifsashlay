@@ -1,0 +1,20 @@
+[
+  {
+    "title": "cat dance",
+    "src": "http://localhost:3000/api/uploads/cat dance.webm",
+    "gifSrc": "https://gifsashlay.fun/api/uploads/cat dance.gif",
+    "uploadDate": "2024-07-09T12:35:20.513Z"
+  },
+  {
+    "title": "geig",
+    "src": "http://localhost:3000/api/uploads/geig.webm",
+    "gifSrc": "https://gifsashlay.fun/api/uploads/geig.gif",
+    "uploadDate": "2024-07-07T11:10:05.300Z"
+  },
+  {
+    "title": "tester",
+    "src": "http://localhost:3000/api/uploads/tester.webm",
+    "gifSrc": "https://gifsashlay.fun/api/uploads/tester.gif",
+    "uploadDate": "2024-07-02T08:39:59.554Z"
+  }
+]

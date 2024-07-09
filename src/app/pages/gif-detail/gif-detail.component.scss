@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+  text-transform: capitalize;
+}
+
+video {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for desktop */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  video {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+/* Styles for mobile */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  video {
+    width: 300px;
+    height: 350px;
+  }
+}

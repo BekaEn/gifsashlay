@@ -1,0 +1,38 @@
+<div class="main-container">
+    <div *ngIf="gifs.length > 0" class="gif-wrapper">
+      <div class="highlighted-gif">
+        <h2 class="title">
+          <a [routerLink]="['/gifs', gifs[0].title]" (click)="redirectToGif(gifs[0])">{{ gifs[0].title }}</a>
+        </h2>
+        <video class="gif" [src]="gifs[0].src" controls (click)="redirectToGif(gifs[0])">
+          Your browser does not support the video tag.
+        </video>
+        <a [routerLink]="['/gifs', gifs[0].title]" class="view-gif-button">View Gif</a>
+      </div>
+  
+      <div class="small-gifs-container">
+        <div *ngFor="let gif of gifs.slice(1, 5)" class="small-gif-container">
+          <h2 class="title">
+            <a [routerLink]="['/gifs', gif.title]" (click)="redirectToGif(gif)">{{ gif.title }}</a>
+          </h2>
+          <video class="gif small" [src]="gif.src" controls (click)="redirectToGif(gif)">
+            Your browser does not support the video tag.
+          </video>
+          <a [routerLink]="['/gifs', gif.title]" class="view-gif-button">View Gif</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="other-gifs-container">
+      <div *ngFor="let gif of gifs.slice(5)" class="gif-container">
+        <h2 class="title">
+          <a [routerLink]="['/gifs', gif.title]" (click)="redirectToGif(gif)">{{ gif.title }}</a>
+        </h2>
+        <video class="gif" [src]="gif.src" controls (click)="redirectToGif(gif)">
+          Your browser does not support the video tag.
+        </video>
+        <a [routerLink]="['/gifs', gif.title]" class="view-gif-button">View Gif</a>
+      </div>
+    </div>
+  </div>
+  

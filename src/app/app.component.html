@@ -1,0 +1,18 @@
+<div class="flex flex-col h-screen" [class.overflow-hidden]="isMenuOpened">
+  <app-mobile-header (openMenu)="openMenu()"></app-mobile-header>
+  <app-header [isMenuOpened]="isMenuOpened" [class.faded-in]="isMenuOpened" [class.faded-out]="!isMenuOpened"></app-header>
+  <div class="flex-grow">
+    <router-outlet (activate)="routerChange()"></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<ng-container *ngIf="isMenuOpened">
+  <button class="humburger" (click)="openMenu()" aria-label="Humburger">
+      <i class="fa-solid fa-xmark" [class.rotate-icon]="isMenuOpened"></i>
+  </button>
+</ng-container>
+
+<button class="top-toggle" (click)="backToTop()" *ngIf="isScrollDown" name="top-toggle-button" [class.toggle]="isScrollClicked">
+  <i class="fas fa-arrow-up"></i>
+</button>

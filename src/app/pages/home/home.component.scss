@@ -1,0 +1,155 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa; // Close to white background color
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.gif-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  background-color: #ffffff; // White background for the GIF container
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-gif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%; 
+  margin-right: 20px;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .gif {
+    width: 500px;
+    height: 460px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .view-gif-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.small-gifs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 60%;
+
+  .small-gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .gif.small {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+
+    .view-gif-button {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+.other-gifs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+
+  .gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .gif {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+
+    .view-gif-button {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+@media (max-width: 768px) { // Adjust breakpoint as needed for mobile devices
+  .gif-wrapper {
+    flex-direction: column; // Stack elements vertically on mobile
+  }
+
+  .highlighted-gif {
+    width: 100%; // Full width for the highlighted GIF
+    margin-right: 0; // Remove right margin
+  }
+
+  .small-gifs-container {
+    grid-template-columns: 1fr; // Single column for small GIFs
+    width: 100%; // Full width for small GIFs
+  }
+
+  .other-gifs-container {
+    grid-template-columns: 1fr; // Single column for other GIFs
+  }
+}
